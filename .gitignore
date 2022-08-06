@@ -3,3 +3,4 @@ env/*
 __pycache__
 /two.txt
 /one.txt
+/three.txt

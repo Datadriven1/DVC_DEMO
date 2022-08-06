@@ -1,7 +1,7 @@
 STAGE = "two"
 
 
-line = "This is stage {STAGE}\n"
+line = f"This is stage {STAGE}\n"
 
 with open("one.txt", "r") as f:
     content = f.read()

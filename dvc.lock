@@ -4,22 +4,38 @@ stages:
     cmd: python stage_01.py
     deps:
     - path: stage_01.py
-      md5: d44a4fbf7e369361e3016dcc2e65024d
-      size: 111
+      md5: 91131fa8d41464b55bf250e849c6829c
+      size: 112
     outs:
     - path: one.txt
-      md5: 62e8c648f76de81788f6d5dfe79b2eb2
-      size: 23
+      md5: 7f6d083ab7ada4721c22b43117c7290b
+      size: 21
   two:
     cmd: python stage_02.py
     deps:
     - path: one.txt
-      md5: 62e8c648f76de81788f6d5dfe79b2eb2
-      size: 23
+      md5: 7f6d083ab7ada4721c22b43117c7290b
+      size: 21
     - path: stage_02.py
-      md5: 379e79b83d05450dc201e33008d0e297
-      size: 215
+      md5: 0097048f134933b99ed8b85457650ca9
+      size: 216
     outs:
     - path: two.txt
-      md5: 62e8c648f76de81788f6d5dfe79b2eb2
-      size: 23
+      md5: ba5b7a3d3acd1769e0691d08169b0d09
+      size: 19
+  three:
+    cmd: python stage_03.py
+    deps:
+    - path: one.txt
+      md5: 7f6d083ab7ada4721c22b43117c7290b
+      size: 21
+    - path: stage_03.py
+      md5: 1a9331b47debc85b3680bd76d6710ed4
+      size: 363
+    - path: two.txt
+      md5: ba5b7a3d3acd1769e0691d08169b0d09
+      size: 19
+    outs:
+    - path: three.txt
+      md5: c9aa08d0330aaeea466d9cc433012e54
+      size: 71
